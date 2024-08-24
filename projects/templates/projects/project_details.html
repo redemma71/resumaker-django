@@ -1,0 +1,18 @@
+{% extends 'projects/base.html' %}
+
+{% load static %}
+
+{% block base_content %}
+
+    <div class="container">
+        <h1 class="cdc">{{ project.title }}</h1>
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static project.image %}" alt="screenshot of the project" />
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.description }}</p>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
