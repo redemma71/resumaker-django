@@ -40,9 +40,6 @@ INSTALLED_APPS = [
     # my applications
     "projects",
     "resume",
-    # GraphQL
-    'graphene_django',
-    # react.js integration
     'rest_framework',
     'corsheaders',
 ]
@@ -137,8 +134,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-
 STATIC_URL = "static/"
+
+# Static files will be built here
+STATIC_ROOT = "build/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

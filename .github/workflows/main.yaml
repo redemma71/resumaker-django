@@ -1,6 +1,5 @@
-name "Deploy Django Resume"
-
 on: [push]
+name "Deploy Django Resume"
 
 jobs:
   build:
