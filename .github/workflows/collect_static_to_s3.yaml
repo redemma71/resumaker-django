@@ -1,12 +1,12 @@
 on: [push]
-name "Deploy Django Resume"
 
+name: 'Collect static files'
 jobs:
   build:
     runs-on: ubuntu-latest
 
     env:
-      AWS_REGION: ${{ env.AWS_REGION }} 
+      AWS_REGION: ap-southeast-2
     
     steps:
       - name: Checkout repository
@@ -47,5 +47,5 @@ jobs:
           CSRF_TRUSTED_ORIGINS: '["*"]'
           CORS_ALLOWED_ORIGINS: '["*"]'
           USE_S3: true
-          AWS_STORAGE_BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_STORAGE_BUCKET_NAME: "django-static-1232"
         run: python ./app/manage.py collectstatic --noinput
